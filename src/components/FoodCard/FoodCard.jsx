@@ -6,13 +6,11 @@ import { assets } from '../../assets/assets';
 const FoodCard = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
-  const API_BASE_URL = import.meta.env.VITE_API_URL;
-
   return (
     <div className="food-item">
       <div className="food-item-image-container">
         <img
-          src={`${API_BASE_URL}/uploads/${image}`}
+          src={image}
           alt={name}
           className="food-item-image"
         />

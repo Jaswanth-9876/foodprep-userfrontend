@@ -56,7 +56,8 @@ const Cart = () => {
             return (
               <React.Fragment key={item._id}>
                 <div className="cart-items-item">
-                 <img src={`${import.meta.env.VITE_API_URL}/uploads/${item.image}`} alt={item.name} />
+                  <img src={item.image} alt={item.name} />
+
 
                   <p>{item.name}</p>
                   <p>₹{item.price}</p>
